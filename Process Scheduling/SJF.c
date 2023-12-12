@@ -21,7 +21,7 @@ void main()
         scanf("%d%d",&p[i].at,&p[i].bt);
         p[i].pid = i+1;
     }
-
+    //Sorting the processes based on ARRIVAL Time in ascending order
     for(int i = 0 ; i < n-1 ; i++)
     {
         for(int j = 0 ; j < n-i-1 ; j++)
@@ -34,7 +34,7 @@ void main()
             }
         }
     }
-
+    //Sorting the processes based on BURST Time in ascending order (Starting from 2nd Process)
     for(int i = 0 ; i < n-1 ; i++)
     {
         for(int j = 1 ; j < n-i-1 ; j++)
