@@ -7,8 +7,6 @@ typedef struct process
 
 void main()
 {
-
-
     int n , ct = 0;
     float awt , avg_tat;
 
@@ -23,7 +21,7 @@ void main()
         scanf("%d%d",&p[i].at,&p[i].bt);
         p[i].pid = i+1;
     }
-
+    //Sorting the processes based on ARRIVAL Time in ascending order
     for(int i = 0 ; i < n-1 ; i++)
     {
         for(int j = 0 ; j < n-i-1 ; j++)
@@ -54,10 +52,10 @@ void main()
         awt += p[i].wt;
         avg_tat += p[i].tat;
     }
-
+    
     awt = awt/n;
     avg_tat = avg_tat/n;
-
+    //(Optional) - Sorting the processes based on PROCESS ID in ascending order 
     for(int i = 0 ; i < n-1 ; i++)
     {
         for(int j = 0 ; j < n-i-1 ; j++)
@@ -74,7 +72,7 @@ void main()
     printf("\nPID\tAT\tBT\tTAT\tWT\n\n");
     for(int i = 0 ; i < n ; i++)
     {
-        printf("%d\t%d\t%d\t%d\t%d\n",p[i].pid,p[i].at,p[i].bt,p[i].tat,p[i].wt);
+        printf("P%d\t%d\t%d\t%d\t%d\n",p[i].pid,p[i].at,p[i].bt,p[i].tat,p[i].wt);
     }
 
     printf("Average TAT : %.2f\n",avg_tat);
